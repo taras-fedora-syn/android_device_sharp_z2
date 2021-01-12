@@ -37,7 +37,7 @@
 |                     | git clone https://github.com/Moyster/o_vendor_mediatek.git -b los-15.1 vendor/mediatek                                    |
 |                     |                                                                                                                           |
 |                     |                                                                                                                           |
-|                     | git clone https://github.com/HyperTeam/android_device_mediatek_sepolicy.git -b lineage-17.1 device/mediatek/sepolicy      |
+|                     | git clone https://github.com/HyperTeam/android_device_mediatek_sepolicy.git -b lineage-17.1 device/mediatek/sepolicy|
 |                     | . vendor/mediatek/patches/install.sh                                                                                      |
 |                     |                                                                                                                           |
 |                                                                                                                                                 |
