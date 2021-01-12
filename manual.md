@@ -36,7 +36,7 @@
 |                     | git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2           |
 |                     |                                                                                                                           |
 |                     | git clone https://github.com/HyperTeam/android_device_mediatek_sepolicy.git -b lineage-17.1 device/mediatek/sepolicy      |
-|                     | . vendor/mediatek/patches/install.sh                                                                                      |
+|                     |                                                                                                                           |
 |                     |                                                                                                                           |
 |                                                                                                                                                 |
 | 4. Setup enviroment | source build/envsetup.sh                                                                                                  |
