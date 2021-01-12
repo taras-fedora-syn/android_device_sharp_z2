@@ -20,7 +20,7 @@
 # Device Picture
 
 ![Sharp Z2](https://fdn2.gsmarena.com/vv/pics/sharp/sharp-z2-1.jpg "Sharp Z2")
-https://stackoverflow.com/questions/47682335/building-unofficial-lineageos-port-with-lunch
+
 # Build
    
 | Step                | Task                                                                                                                 |
