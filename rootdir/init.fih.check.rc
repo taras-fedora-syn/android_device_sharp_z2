@@ -1,0 +1,20 @@
+on post-fs-data        
+        restorecon_recursive /BBSYS
+        restorecon_recursive /securefs
+        
+on property:sys.fih.check=1
+        start fih_fast_check
+
+# create filesystems if necessary
+service check_sys /system/bin/fih_signature -c /system
+        class core
+        user root
+        group root
+        oneshot
+
+service fih_fast_check /system/bin/fih_fast_check
+        class core
+        user system
+        group system
+        disabled
+        oneshot

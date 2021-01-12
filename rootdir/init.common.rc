@@ -1,0 +1,125 @@
+on fs
+#20150414 Holy modified for add ext4 partition {
+    mkdir /hidden 0777 system system
+    mkdir /hidden/data 0777 system system
+    mount ext4 /dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cda /hidden/data nosuid nodev
+
+    chown system hidden /hidden
+    restorecon_recursive /hidden
+
+    chown system system /hidden/data
+    restorecon_recursive /hidden/data
+#20150414 Holy modified for add ext4 partition }
+
+# Holy /data/cda
+    mkdir /data/cda 0777 system system
+    chown system system /data/cda
+    copy /data/CDAOne_Tag /data/cda/CDAOne_Tag
+    copy /data/CDABUILDPROP_Tag /data/cda/CDABUILDPROP_Tag
+    rm /data/CDAOne_Tag
+    rm /data/CDABUILDPROP_Tag
+    chmod 0755 /data/cda/CDAOne_Tag
+    chmod 0755 /data/cda/CDABUILDPROP_Tag
+    chmod 0755 /data/data/com.fihtdc.CDA/CDAFinish
+    copy /data/data/com.fihtdc.CDA/CDAFinish /data/cda/CDAFinish
+    chmod 0755 /data/cda/CDAFinish
+
+#20150414 Holy Set /hidden /hidden/data directory permission {
+    chmod 0551 /hidden
+    chmod 0551 /hidden/data
+
+# Relabel /system/CDA
+    restorecon_recursive /system/CDA
+
+    exec /system/bin/sh /init.mtk.pre-cda.sh
+    exec /system/bin/sh /init.mtk.cda.sh
+    chmod 0777 /hidden/data/CDA/init.CDA.sh
+    exec /system/bin/sh /hidden/data/CDA/init.CDA.sh
+#20150414 HolySet /hidden /hidden/data directory permission }
+
+#Holy, 2nd application install directory
+mkdir /data/app/preload 0771 system system
+
+#service commonboot /system/bin/sh /system/etc/common_bootscript.sh
+#  class main
+#    oneshot
+#    console
+
+#TonyCYLin@20130819, 2nd application install directory
+    mkdir /data/app/preload 0771 system system
+    
+#black box system begin
+service bbsys_bc /system/bin/bbsbc
+    class main
+    disabled
+    oneshot
+
+service bbsys /system/bin/pandoraservice
+   class bbsys
+   user system
+   oneshot
+   group system media_rw sdcard_rw
+   socket bbsys stream 666 system system
+
+on fs
+   # sunyongshan
+   chown system system /BBSYS
+   chmod 0770 /BBSYS
+   chmod 0660 /dev/fih
+   chown root system /dev/fih
+   restorecon_recursive /BBSYS
+
+on property:persist.sys.bbsys=on
+   start bbsys
+
+on property:persist.sys.bbsys=off
+   stop bbsys
+
+on property:persist.sys.bbsys=restart
+   stop bbsys
+   setprop persist.sys.bbsys on
+
+on property:sys.bbsys.bc=*
+    start bbsys_bc
+#black box system end
+
+
+# sunyongshan Begin
+on property:sys.fih.check=1
+   start fih_fast_check
+
+# create filesystems if necessary
+service check_sys /system/bin/fih_signature -c /system
+   class core
+   user root
+   group root
+   oneshot
+
+service fih_fast_check /system/bin/fih_fast_check
+   class core
+   user system
+   group system
+   disabled
+   oneshot
+# sunyongshan End
+
+#fix cda issue begin
+on post-fs-data
+    mkdir /data/cda 0777 system system
+    
+    copy /data/data/com.fihtdc.CDA/CDAFinish /data/cda/CDAFinish
+    chmod 0755 /data/cda/CDAFinish
+
+    copy /data/data/com.fihtdc.CDA/CDAFinish /cache/cda/CDAFinish
+    chmod 0755 /cache/cda/CDAFinish
+
+    copy /data/cda/CDAOne_Tag /cache/cda/CDAOne_Tag
+    copy /data/cda/CDABUILDPROP_Tag /cache/cda/CDABUILDPROP_Tag
+    
+    rm /hidden/data/CDA/CDAStatus
+
+    #exec /system/bin/sh /init.mtk.pre-cda.sh
+    #exec /system/bin/sh /init.mtk.cda.sh
+    #chmod 0777 /hidden/data/CDA/init.CDA.sh
+    #exec /system/bin/sh /hidden/data/CDA/init.CDA.sh
+#fix cda issue end

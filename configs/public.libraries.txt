@@ -1,0 +1,11 @@
+libion_mtk.so
+libOpenCL.so
+libmpbase.so
+libarcsoft_beautyshot_image_algorithm.so
+libarcsoft_beautyshot.so
+libarcsoft_panorama_burstcapture.so
+libarcsoft_night_shot.so
+libarcsoft_hdr.so
+libarcsoft_face_tracking.so
+libarcsoft_face_detection.so
+libarcsoft_beautyshot.so
