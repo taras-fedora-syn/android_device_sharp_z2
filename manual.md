@@ -1,4 +1,4 @@
-# Device Tree for Sharp Z2 Lineage 15.1
+# Device Tree for Sharp Z2
 
 ## Spec Sheet
 
@@ -29,17 +29,19 @@ https://stackoverflow.com/questions/47682335/building-unofficial-lineageos-port-
 |                     | chmod -R 777 foldername                                                                                              |
 |                     | cd foldername                                                                                                        |
 |                     | git config --global user.name "name" && git config --global user.email "name@gmail.com"                              |
-|                     | repo init -u git://github.com/LineageOS/android.git -b lineage-15.1                                                  |
+|                     | repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r81                                 |
 |                     | repo sync -c -j4 --force-sync                                                                                        |
-| 2. Init device files| git clone https://github.com/taras-fedora-syn/android_device_sharp_z2.git -b aosp device/sharp/sharp_z2
-                        git clone https://github.com/taras-fedora-syn/android_vendor_sharp_z2.git --single-branch vendor/sharp/sharp_z2
-                        git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2
-                        git clone https://github.com/Moyster/o_vendor_mediatek.git -b los-15.1 vendor/mediatek
-                        git clone https://github.com/HyperTeam/android_device_mediatek_sepolicy.git -b lineage-17.1 device/mediatek/sepolicy
-                        . vendor/mediatek/patches/install.sh                                                                                 |
-|                     |                                                                                                             |
-|                                                                                                         |
+| 2. Init device files| git clone https://github.com/taras-fedora-syn/android_device_sharp_z2.git -b aosp device/sharp/sharp_z2              |
+|                     | git clone https://github.com/taras-fedora-syn/android_vendor_sharp_z2.git --single-branch vendor/sharp/sharp_z2      |
+|                     | git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2      |
+|                     | git clone https://github.com/Moyster/o_vendor_mediatek.git -b los-15.1 vendor/mediatek                               |
+|                     |                                                                                                                      |
+|                     |                                                                                                                      |
+|                     | git clone https://github.com/HyperTeam/android_device_mediatek_sepolicy.git -b lineage-17.1 device/mediatek/sepolicy |
+|                     | . vendor/mediatek/patches/install.sh                                                                                 |
+|                     |                                                                                                                      |
+|                                                                                                                                            |
 | 4. Setup enviroment | source build/envsetup.sh                                                                                             |
-| 5. Init device      | lunch                                                                                         |
-| 6. Start build      | make otapackage                                                                                    |
+| 5. Init device      | lunch                                                                                                                |
+| 6. Start build      | make otapackage                                                                                                      |
 |                     |                                                                                                                      | 
