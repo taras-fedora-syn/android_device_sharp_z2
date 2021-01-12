@@ -1,4 +1,4 @@
-# Device Tree for Sharp Z2 Lineage 15.1
+# Device Tree for Sharp Z2
 
 ## Datasheet
 
