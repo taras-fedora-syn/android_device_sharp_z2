@@ -17,14 +17,26 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi 280dpi hdpi tvdpi mdpi ldpi
 TARGET_OTA_ASSERT_DEVICE := Sharp Z2,Sharp A1,FS8200
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    audio.a2dp.default \
+    tinymix
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
+	$(LOCAL_PATH)/configs/audio/audio_effects.xml:system/etc/audio_effects.xml \
+	$(LOCAL_PATH)/configs/audio/audio_em.xml:system/etc/audio_em.xml \
+	$(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
 	$(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-	$(LOCAL_PATH)/configs/audio/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml
+	$(LOCAL_PATH)/configs/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:system/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+	$(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
+	$(LOCAL_PATH)/configs/audio/misound_res.bin:/system/etc/misound_res.bin
 
 # Media
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/configs/media_codecs_c2.xml:system/etc/media_codecs_c2.xml \	
 	$(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
 	$(LOCAL_PATH)/configs/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
 	$(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
