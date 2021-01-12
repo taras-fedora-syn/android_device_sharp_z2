@@ -88,5 +88,3 @@ TARGET_HAS_FOD := true
 
 # Vendor
 $(call inherit-product, vendor/sharp/sharp_z2/sharp_z2-vendor.mk)
-
-include vendor/mediatek/VendorProduct.mk
