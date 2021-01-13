@@ -135,9 +135,10 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-02-01
 
-# Sepolicy
-include device/mediatek/sepolicy/sepolicy.mk
-
+# SELinux
+BOARD_SEPOLICY_DIRS := \
+       $(LOCAL_PATH)/sepolicy
+       
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
