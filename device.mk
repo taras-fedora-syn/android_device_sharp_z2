@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/media/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
 	$(LOCAL_PATH)/media/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
 	$(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-	$(LOCAL_PATH)/media/media_profiles.xml_V1_0:system/etc/media_profiles.xml_V1_0
+	$(LOCAL_PATH)/media/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
