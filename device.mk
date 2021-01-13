@@ -24,14 +24,14 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
-	$(LOCAL_PATH)/configs/audio/audio_effects.xml:system/etc/audio_effects.xml \
-	$(LOCAL_PATH)/configs/audio/audio_em.xml:system/etc/audio_em.xml \
-	$(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
-	$(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-	$(LOCAL_PATH)/configs/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:system/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
-	$(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
-	$(LOCAL_PATH)/configs/audio/misound_res.bin:/system/etc/misound_res.bin
+	$(LOCAL_PATH)/audio/audio_device.xml:system/etc/audio_device.xml \
+	$(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml \
+	$(LOCAL_PATH)/audio/audio_em.xml:system/etc/audio_em.xml \
+	$(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+	$(LOCAL_PATH)/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:system/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+	$(LOCAL_PATH)/audio/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
+	$(LOCAL_PATH)/audio/misound_res.bin:/system/etc/misound_res.bin
 
 # Media
 PRODUCT_COPY_FILES += \
