@@ -34,11 +34,6 @@
 | 2. Init device files| git clone https://github.com/taras-fedora-syn/android_device_sharp_z2.git --single-branch device/sharp/sharp_z2           |
 |                     | git clone https://github.com/taras-fedora-syn/android_vendor_sharp_z2.git --single-branch vendor/sharp/sharp_z2           |
 |                     | git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2           |
-|                     |                                                                                                                           |
-|                     | git clone https://github.com/HyperTeam/android_device_mediatek_sepolicy.git -b lineage-17.1 device/mediatek/sepolicy      |
-|                     |                                                                                                                           |
-|                     |                                                                                                                           |
-|                                                                                                                                                 |
 | 4. Setup enviroment | source build/envsetup.sh                                                                                                  |
 | 5. Init device      | lunch                                                                                                                     |
 | 6. Start build      | make otapackage                                                                                                           |
