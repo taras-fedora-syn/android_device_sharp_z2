@@ -28,7 +28,5 @@
 
 ### Thanks to:
  * vinixast
- * waiser
- * Verevka
- * graineeg
- * bju2000
+ * Team M.A.D
+ * Verevka 
