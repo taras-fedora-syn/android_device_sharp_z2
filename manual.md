@@ -22,21 +22,21 @@
 ![Sharp Z2](https://fdn2.gsmarena.com/vv/pics/sharp/sharp-z2-1.jpg "Sharp Z2")
 
 # Build
-# Installing Repo
+## Installing Repo
 
-mkdir ~/bin
+| mkdir ~/bin
 
-PATH=~/bin:$PATH
+| PATH=~/bin:$PATH
 
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+| curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 
-chmod a+x ~/bin/repo
+| chmod a+x ~/bin/repo
 
-mkdir foldername
+| mkdir foldername
 
-chmod -R 777 foldername
+| chmod -R 777 foldername
 
-cd foldername
+| cd foldername
    
 | Step                | Task                                                                                                                      |
 | :-------------------| :-------------------------------------------------------------------------------------------------------------------------|
