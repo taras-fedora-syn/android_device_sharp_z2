@@ -48,4 +48,4 @@
 | 6. Start build      | make otapackage                                                                                                           |
 |                     |                                                                                                                           | 
 |kernel Android 6.0   |  git clone https://github.com/taras-fedora-syn/m685.git --single-branch kernel/sharp/sharp_z2
-|repo android-7.1.2_r9|  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r9
+|repo android-7.1.2_r9|  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r8
