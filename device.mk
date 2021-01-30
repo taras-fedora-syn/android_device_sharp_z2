@@ -99,5 +99,8 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-hwui
 
 TARGET_HAS_FOD := true
 
+# Common stuff
+$(call inherit-product, vendor/sharp/sharp_z2/config/common.mk)
+
 # Vendor
 $(call inherit-product, vendor/sharp/sharp_z2/sharp_z2-vendor.mk)
