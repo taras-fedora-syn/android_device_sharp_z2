@@ -91,11 +91,20 @@ PRODUCT_COPY_FILES += \
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
 
-# Dalvik heap configurations
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-dalvik-heap.mk)
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
 
-# Call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-hwui-memory.mk)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
+# Vulkan
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
+
+# Dalvik/HWUI
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 TARGET_HAS_FOD := true
 
