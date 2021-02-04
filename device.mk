@@ -59,7 +59,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.mt6797.rc:root/init.mt6797.rc \
 	$(LOCAL_PATH)/rootdir/init.mt6797.usb.rc:root/init.mt6797.usb.rc \
 	$(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
-	$(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
 	$(LOCAL_PATH)/rootdir/init.recovery.mt6797.rc:root/init.recovery.mt6797.rc \
 	$(LOCAL_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
 	$(LOCAL_PATH)/rootdir/init.usb.rc:root/init.usb.rc \
