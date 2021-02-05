@@ -71,8 +71,13 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/meta_init.project.rc:root/meta_init.project.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc \
-	$(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc
-	
+	$(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc \
+	$(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
+	$(LOCAL_PATH)/rootdir/Fih_Hwid_Info:root/Fih_Hwid_Info \
+	$(LOCAL_PATH)/rootdir/init.mtk.cda.sh:root/init.mtk.cda.sh \
+	$(LOCAL_PATH)/rootdir/init.mtk.pre-cda.sh:root/init.mtk.pre-cda.sh \
+	$(LOCAL_PATH)/rootdir/verity_key:root/verity_key
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
