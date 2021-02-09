@@ -31,34 +31,34 @@ PRODUCT_COPY_FILES += \
 	
 # MTK Helpers
 PRODUCT_PACKAGES += \
-    libccci_util \
-    libgralloc_extra \
-    libgui_ext \
-    libion \
-    lights.mt6797 \
-    libui_ext \
-    libmtk_symbols
+	libccci_util \
+	libgralloc_extra \
+	libgui_ext \
+	libion \
+	lights.mt6797 \
+	libui_ext \
+	libmtk_symbols
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.mt6797 \
-    libcurl \
-    YGPS
+	gps.mt6797 \
+	libcurl \
+	YGPS
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio_policy.default \
-    audio.r_submix.default \
-    audio.usb.default \
-    libaudio-resampler \
-    libemoji \
-    com.android.future.usb.accessory \
-    libnl_2 \
-    libtinyalsa \
-    libtinycompress \
-    libtinymix \
-    libtinyxml
+	audio.a2dp.default \
+	audio_policy.default \
+	audio.r_submix.default \
+	audio.usb.default \
+	libaudio-resampler \
+	libemoji \
+	com.android.future.usb.accessory \
+	libnl_2 \
+	libtinyalsa \
+	libtinycompress \
+	libtinymix \
+	libtinyxml
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -100,42 +100,42 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.android.checkjni=0 \
-    ro.telephony.ril_class=MediaTekRIL \
-    ro.telephony.ril.config=fakeiccid \
-    ro.com.android.mobiledata=false
+	ro.kernel.android.checkjni=0 \
+	ro.telephony.ril_class=MediaTekRIL \
+	ro.telephony.ril.config=fakeiccid \
+	ro.com.android.mobiledata=false
 	
 SIM_COUNT := 2
 PRODUCT_PROPERTY_OVERRIDES += ro.telephony.sim.count=$(SIM_COUNT)
 
 # WiFi
 PRODUCT_PACKAGES += \
-    lib_driver_cmd_mt66xx \
-    hostapd \
-    libwpa_client \
-    wpa_supplicant
+	lib_driver_cmd_mt66xx \
+	hostapd \
+	libwpa_client \
+	wpa_supplicant
 
 # Default.prop
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    security.perf_harden=1 \
-    ro.allow.mock.location=0 \
-    ro.debuggable=1 \
-    persist.service.acm.enable=0 \
-    ro.mount.fs=EXT4 \
-    camera.disable_zsl_mode=1 \
-    persist.sys.usb.config=adb
+	ro.adb.secure=0 \
+	ro.secure=0 \
+	security.perf_harden=1 \
+	ro.allow.mock.location=0 \
+	ro.debuggable=1 \
+	persist.service.acm.enable=0 \
+	ro.mount.fs=EXT4 \
+	camera.disable_zsl_mode=1 \
+	persist.sys.usb.config=adb
 
 # build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.legacyencoder=true \
-    media.stagefright.less-secure=true
+	media.stagefright.legacyencoder=true \
+	media.stagefright.less-secure=true
 
 # extra log controls prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.ril.log=0 \
-    ro.disable.xlog=0
+	persist.ril.log=0 \
+	ro.disable.xlog=0
     
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := Sharp Z2,Sharp A1,FS8200
@@ -190,23 +190,23 @@ include $(LOCAL_PATH)/product/*.mk
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+	fingerprintd
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
 # Vulkan
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
+	frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
+	frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
 
 PRODUCT_PACKAGES += \
 	fs_config_files
 
 # Power
 PRODUCT_PACKAGES += \
-    power.default
-    power.mt6797
+	power.default \
+	power.mt6797
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -227,23 +227,22 @@ PRODUCT_PACKAGES += \
 	mount.exfat \
 	fsck.exfat \
 	mkfs.exfat
-
+	
 # NTFS
 PRODUCT_PACKAGES += \
 	fsck.ntfs \
 	mkfs.ntfs \
 	mount.ntfs
-
-
+	
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
-    $(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/.tp/.thermal_policy_00 \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_02:system/etc/.tp/.thermal_policy_02 \
-    $(LOCAL_PATH)/configs/thermal/.thermal_policy_03:system/etc/.tp/.thermal_policy_03 \
+	$(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
+	$(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
+	$(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+	$(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/.tp/.thermal_policy_00 \
+	$(LOCAL_PATH)/configs/thermal/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 \
+	$(LOCAL_PATH)/configs/thermal/.thermal_policy_02:system/etc/.tp/.thermal_policy_02 \
+	$(LOCAL_PATH)/configs/thermal/.thermal_policy_03:system/etc/.tp/.thermal_policy_03 \
 
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-4096-dalvik-heap.mk)
