@@ -177,8 +177,56 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml
 
+PRODUCT_PACKAGES += \
+	fs_config_files
+
+# Power
+PRODUCT_PACKAGES += \
+    power.default
+    power.mt6797
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+	e2fsck \
+	fibmap.f2fs \
+	fsck.f2fs \
+	mkfs.f2fs \
+	make_ext4fs \
+	resize2fs \
+	setup_fs \
+	ext4_resize \
+	libext2_blkid \
+	libext2_uuid_static \
+	superumount
+
+# exFAT
+PRODUCT_PACKAGES += \
+	mount.exfat \
+	fsck.exfat \
+	mkfs.exfat
+
+# NTFS
+PRODUCT_PACKAGES += \
+	fsck.ntfs \
+	mkfs.ntfs \
+	mount.ntfs
+
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc \
+    $(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
+    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+    $(LOCAL_PATH)/configs/thermal/.thermal_policy_00:system/.tp/.thermal_policy_00 \
+    $(LOCAL_PATH)/configs/thermal/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 \
+    $(LOCAL_PATH)/configs/thermal/.thermal_policy_02:system/etc/.tp/.thermal_policy_02 \
+    $(LOCAL_PATH)/configs/thermal/.thermal_policy_03:system/etc/.tp/.thermal_policy_03 \
+
 # Dalvik/HWUI
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-4096-dalvik-heap.mk)
+
+# Call hwui memory config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-4096-hwui-memory.mk)
 
 TARGET_HAS_FOD := true
 
