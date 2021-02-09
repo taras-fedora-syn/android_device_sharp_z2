@@ -38,6 +38,39 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/media/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
 	$(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
 	$(LOCAL_PATH)/media/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
+	
+# MTK Helpers
+PRODUCT_PACKAGES += \
+    libccci_util \
+    libgralloc_extra \
+    libgui_ext \
+    libion \
+    lights.mt6797 \
+    libui_ext \
+    libmtk_symbols
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.mt6797 \
+    libcurl \
+    YGPS
+
+# Extra packages
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio_policy.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudio-resampler \
+    libemoji \
+    com.android.future.usb.accessory \
+    libnl_2 \
+    libtinyalsa \
+    libtinycompress \
+    libtinymix \
+    libtinyxml
+
+PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
