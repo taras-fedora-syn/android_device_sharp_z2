@@ -13,31 +13,21 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@5.0-impl \
-    android.hardware.soundtrigger@2.2-impl \
-    audio.a2dp.default \
-    tinymix
-
+# Audio policy & codec
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/audio/audio_device.xml:system/etc/audio_device.xml \
-	$(LOCAL_PATH)/audio/audio_effects.xml:system/etc/audio_effects.xml \
-	$(LOCAL_PATH)/audio/audio_em.xml:system/etc/audio_em.xml \
-	$(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-	$(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-	$(LOCAL_PATH)/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:system/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
-	$(LOCAL_PATH)/audio/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
-	$(LOCAL_PATH)/audio/misound_res.bin:/system/etc/misound_res.bin
-
-# Media
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/media/media_codecs_c2.xml:system/etc/media_codecs_c2.xml \
-	$(LOCAL_PATH)/media/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
-	$(LOCAL_PATH)/media/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
-	$(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-	$(LOCAL_PATH)/media/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
+	$(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
+	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+	frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
+	frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
+	frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
+	frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
+	frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
+	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
 	
 # MTK Helpers
 PRODUCT_PACKAGES += \
