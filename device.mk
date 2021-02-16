@@ -97,7 +97,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.mtk.cda.sh:root/init.mtk.cda.sh \
 	$(LOCAL_PATH)/rootdir/init.mtk.pre-cda.sh:root/init.mtk.pre-cda.sh \
 	$(LOCAL_PATH)/rootdir/verity_key:root/verity_key
-
+	
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/sbin/multi_init:root/sbin/multi_init \
+	$(LOCAL_PATH)/rootdir/sbin/fuelgauged_static:root/sbin/fuelgauged_static
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.kernel.android.checkjni=0 \
