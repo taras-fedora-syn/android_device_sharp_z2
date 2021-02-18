@@ -82,6 +82,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.recovery.mt6797.rc:root/init.recovery.mt6797.rc \
 	$(LOCAL_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
 	$(LOCAL_PATH)/rootdir/init.usb.rc:root/init.usb.rc \
+	$(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
 	$(LOCAL_PATH)/rootdir/init.volte.rc:root/init.volte.rc \
 	$(LOCAL_PATH)/rootdir/init.wfca.rc:root/init.wfca.rc \
 	$(LOCAL_PATH)/rootdir/init.xlog.rc:root/init.xlog.rc \
@@ -100,6 +101,8 @@ PRODUCT_COPY_FILES += \
 	
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/sbin/multi_init:root/sbin/multi_init \
+	$(LOCAL_PATH)/rootdir/sbin/adbd:root/sbin/adbd \
+	$(LOCAL_PATH)/rootdir/sbin/healthd:root/sbin/healthd \
 	$(LOCAL_PATH)/rootdir/sbin/fuelgauged_static:root/sbin/fuelgauged_static
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
