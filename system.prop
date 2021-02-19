@@ -23,12 +23,10 @@ ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 
-
 # WiFi
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
-
 
 # Graphic
 debug.hwui.render_dirty_regions=false
