@@ -69,7 +69,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/fstab.mt6797:root/fstab.mt6797 \
 	$(LOCAL_PATH)/rootdir/init.common.rc:root/init.common.rc \
 	$(LOCAL_PATH)/rootdir/init.common_svc.rc:root/init.common_svc.rc \
-	$(LOCAL_PATH)/rootdir/init.environ.rc:root/init.environ.rc \
 	$(LOCAL_PATH)/rootdir/init.microtrust.rc:root/init.microtrust.rc \
 	$(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
 	$(LOCAL_PATH)/rootdir/init.mt6797.rc:root/init.mt6797.rc \
