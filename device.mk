@@ -67,13 +67,9 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/factory_init.project.rc:root/factory_init.project.rc \
 	$(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
 	$(LOCAL_PATH)/rootdir/fstab.mt6797:root/fstab.mt6797 \
-	$(LOCAL_PATH)/rootdir/init.aee.rc:root/init.aee.rc \
 	$(LOCAL_PATH)/rootdir/init.common.rc:root/init.common.rc \
 	$(LOCAL_PATH)/rootdir/init.common_svc.rc:root/init.common_svc.rc \
 	$(LOCAL_PATH)/rootdir/init.environ.rc:root/init.environ.rc \
-	$(LOCAL_PATH)/rootdir/init.epdg.rc:root/init.epdg.rc \
-	$(LOCAL_PATH)/rootdir/init.fih.check.rc:root/init.fih.check.rc \
-	$(LOCAL_PATH)/rootdir/init.mal.rc:root/init.mal.rc \
 	$(LOCAL_PATH)/rootdir/init.microtrust.rc:root/init.microtrust.rc \
 	$(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
 	$(LOCAL_PATH)/rootdir/init.mt6797.rc:root/init.mt6797.rc \
@@ -90,8 +86,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.project.rc:root/meta_init.project.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
-	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc \
-	$(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh
+	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
