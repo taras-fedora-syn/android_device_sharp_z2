@@ -76,11 +76,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.mt6797.usb.rc:root/init.mt6797.usb.rc \
 	$(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
 	$(LOCAL_PATH)/rootdir/init.recovery.mt6797.rc:root/init.recovery.mt6797.rc \
-	$(LOCAL_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
-	$(LOCAL_PATH)/rootdir/init.usb.rc:root/init.usb.rc \
-	$(LOCAL_PATH)/rootdir/init.volte.rc:root/init.volte.rc \
-	$(LOCAL_PATH)/rootdir/init.wfca.rc:root/init.wfca.rc \
-	$(LOCAL_PATH)/rootdir/init.xlog.rc:root/init.xlog.rc \
 	$(LOCAL_PATH)/rootdir/init.zygote32.rc:root/init.zygote32.rc \
 	$(LOCAL_PATH)/rootdir/init.zygote64_32.rc:root/init.zygote64_32.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
