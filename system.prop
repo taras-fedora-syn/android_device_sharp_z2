@@ -3,7 +3,7 @@
 #
 
 # RIL
-rild.libpath=/system/lib64/mtk-ril.so
+rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
 # Wifi
@@ -12,7 +12,6 @@ wifi.direct.interface=p2p0
 
 # OpenGL
 ro.opengles.version=196608
-ro.kernel.qemu.gles=0
 
 # Dalvik
 dalvik.vm.heapgrowthlimit=256m
@@ -23,72 +22,58 @@ ro.camera.sound.forced=0
 ro.audio.silent=0
 persist.af.audio_patch_fm=1
 
-ro.zygote.preload.enable=0
-
-# Disable Navigation Bar
+# Enable soft keys
 qemu.hw.mainkeys=0
 
-# Disable dirty region for Mali
-debug.hwui.render_dirty_regions=false
-
-# lcd density
+# LCD density
 ro.sf.lcd_density=480
 
+ro.sf.hwrotation=0
+
+# Mediatek
+ro.mediatek.chip_ver=S01
+ro.mediatek.platform=MT6797
+ro.mediatek.version.release=alps-mp-m0.mp9-V1.70_fih6797.6c.tc2.m_P96
+
 # RIL
-ro.telephony.sim.count=2
-persist.radio.default.sim=0
-persist.radio.mobile.data=0,0
 persist.radio.multisim.config=dsds
-bgw.current3gband=0
-ril.current.share_modem=2
-ril.external.md=0
-ril.telephony.mode=0
 persist.radio.fd.counter=15
 persist.radio.fd.off.counter=5
 persist.radio.fd.r8.counter=15
 persist.radio.fd.off.r8.counter=5
-ro.mtk_gemini_support=1
-persist.gemini.sim_num=2
-ro.gemini.smart_sim_switch=false
-
-# MTK
-ro.mtk_gemini_enhancement=1
-ro.mtk_eap_sim_aka=1
+ro.telephony.sim.count=2
+ril.current.share_modem=2
+ril.external.md=0
+ril.telephony.mode=0
 ro.mtk_enable_md1=1
 ro.mtk_flight_mode_power_off_md=1
-ro.mtk_sim_hot_swap=1
+ro.mtk_md_world_mode_support=1
 ro.mtk_world_phone=1
-ro.mtk_cta_set=1
-ro.mtk_lte_support=1
+ro.mtk_world_phone_policy=0
 ro.mtk_rild_read_imsi=1
-fmradio.driver.enable=0
-ro.mtk_bt_support=1
-ro.mtk_agps_app=1
-ro.mtk_wlan_support=1
-ro.mtk_gps_support=1
-persist.md.perm.checked=1
+ro.mtk_volte_support=1
+persist.mtk.volte.enable=1
+ro.boot.opt_md1_support=1
 
-# other things
-ro.mediatek.chip_ver=S01
-ro.mediatek.version.release=alps-mp-m0.mp9-v1.78.1_nb6797.6c.m
-ro.mediatek.platform=MT6797
-bgw.current3gband=0
-ro.sf.hwrotation=0
-persist.mtk.wcn.combo.chipid=-1
-drm.service.enabled=true
+# WFD
 wfd.dummy.enable=1
-persist.sys.display.clearMotion=1
-ro.mtk_clearmotion_support=1
-keyguard.no_require_sim=true
+wfd.iframesize.level=0
 persist.debug.wfd.enable=1
-ro.hall.sensor.enabled=1
 
-# Power save
-ro.ril.disable.power.collapse=1
-pm.sleep_mode=1
-wifi.supplicant_scan_interval=360
+# WMT
+persist.mtk.wcn.combo.chipid=-1
+persist.mtk.wcn.patch.version=-1
+persist.mtk.wcn.dynamic.dump=0
+service.wcn.driver.ready=no
+service.wcn.coredump.mode=0
 
-dalvik.vm.dexopt-flags=v=n, o=v
-ro.mtk_bg_power_saving_support=1
-ro.mtk_bg_power_saving_ui=1
+# PQ
+ro.mtk_pq_support=3
+ro.mtk_pq_color_mode=1
 
+# OMX
+ro.mtk_deinterlace_support=1
+mtk.vdec.waitkeyframeforplay=1
+
+# DRM
+drm.service.enabled=true
