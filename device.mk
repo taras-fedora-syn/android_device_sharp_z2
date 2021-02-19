@@ -76,6 +76,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/meta_init.project.rc:root/meta_init.project.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
 	$(LOCAL_PATH)/rootdir/init.volte.rc:root/init.volte.rc \
+	$(LOCAL_PATH)/rootdir/init.mal.rc:root/init.mal.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc
 
 # RIL
