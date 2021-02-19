@@ -67,16 +67,12 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/factory_init.project.rc:root/factory_init.project.rc \
 	$(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
 	$(LOCAL_PATH)/rootdir/fstab.mt6797:root/fstab.mt6797 \
-	$(LOCAL_PATH)/rootdir/init.common.rc:root/init.common.rc \
-	$(LOCAL_PATH)/rootdir/init.common_svc.rc:root/init.common_svc.rc \
 	$(LOCAL_PATH)/rootdir/init.microtrust.rc:root/init.microtrust.rc \
 	$(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
 	$(LOCAL_PATH)/rootdir/init.mt6797.rc:root/init.mt6797.rc \
 	$(LOCAL_PATH)/rootdir/init.mt6797.usb.rc:root/init.mt6797.usb.rc \
 	$(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
 	$(LOCAL_PATH)/rootdir/init.recovery.mt6797.rc:root/init.recovery.mt6797.rc \
-	$(LOCAL_PATH)/rootdir/init.zygote32.rc:root/init.zygote32.rc \
-	$(LOCAL_PATH)/rootdir/init.zygote64_32.rc:root/init.zygote64_32.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.project.rc:root/meta_init.project.rc \
 	$(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
