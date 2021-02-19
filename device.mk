@@ -82,7 +82,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.recovery.mt6797.rc:root/init.recovery.mt6797.rc \
 	$(LOCAL_PATH)/rootdir/init.trace.rc:root/init.trace.rc \
 	$(LOCAL_PATH)/rootdir/init.usb.rc:root/init.usb.rc \
-	$(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
 	$(LOCAL_PATH)/rootdir/init.volte.rc:root/init.volte.rc \
 	$(LOCAL_PATH)/rootdir/init.wfca.rc:root/init.wfca.rc \
 	$(LOCAL_PATH)/rootdir/init.xlog.rc:root/init.xlog.rc \
@@ -93,17 +92,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc \
 	$(LOCAL_PATH)/rootdir/ueventd.rc:root/ueventd.rc \
-	$(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
-	$(LOCAL_PATH)/rootdir/Fih_Hwid_Info:root/Fih_Hwid_Info \
-	$(LOCAL_PATH)/rootdir/init.mtk.cda.sh:root/init.mtk.cda.sh \
-	$(LOCAL_PATH)/rootdir/init.mtk.pre-cda.sh:root/init.mtk.pre-cda.sh \
-	$(LOCAL_PATH)/rootdir/verity_key:root/verity_key
-	
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/rootdir/sbin/multi_init:root/sbin/multi_init \
-	$(LOCAL_PATH)/rootdir/sbin/adbd:root/sbin/adbd \
-	$(LOCAL_PATH)/rootdir/sbin/healthd:root/sbin/healthd \
-	$(LOCAL_PATH)/rootdir/sbin/fuelgauged_static:root/sbin/fuelgauged_static
+	$(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.kernel.android.checkjni=0 \
