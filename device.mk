@@ -16,7 +16,9 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Audio policy & codec
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
 	$(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
+	$(LOCAL_PATH)/configs/audio/audio_em.xml:system/etc/audio_em.xml \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
 	$(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
 	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
