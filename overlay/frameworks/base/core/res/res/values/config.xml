@@ -118,22 +118,11 @@
     <!-- Auto Power Modes is required for Doze and App Standby -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- Control whether Night display is available. -->
-    <bool name="config_nightDisplayAvailable">true</bool>
-
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
-
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/arm64/boot.oat"</item>
-        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-    </string-array>
-
+    
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The Google provider -->
         <item>com.google.android.gms</item>
