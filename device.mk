@@ -20,8 +20,9 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/audio_device.xml:system/etc/audio_device.xml \
 	$(LOCAL_PATH)/audio/audio_em.xml:system/etc/audio_em.xml \
 	$(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/media/media_codecs_c2.xml:system/etc/media_codecs_c2.xml \
 	$(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-	$(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml \
+	$(LOCAL_PATH)/media/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml \
 	$(LOCAL_PATH)/media/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
 	$(LOCAL_PATH)/media/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
 	$(LOCAL_PATH)/media/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
