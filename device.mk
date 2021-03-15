@@ -8,10 +8,12 @@ USE_MINIKIN := true
 # Configure jemalloc for low memory
 MALLOC_SVELTE := true
 
-# Screen density
-PRODUCT_AAPT_CONFIG := normal
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-PRODUCT_CHARACTERISTICS := nosdcard
+
+# Recovery allowed devices
+TARGET_OTA_ASSERT_DEVICE := Sharp Z2,Sharp A1,FS8200
 
 # Audio policy & codec
 PRODUCT_COPY_FILES += \
