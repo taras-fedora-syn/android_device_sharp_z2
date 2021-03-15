@@ -117,12 +117,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.ril.log=0 \
 	ro.disable.xlog=0
     
-# Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := Sharp Z2,Sharp A1,FS8200
-    
-# BLOCK_BASED_OTA
-BLOCK_BASED_OTA := false
-
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
