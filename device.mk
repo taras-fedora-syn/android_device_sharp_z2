@@ -123,6 +123,16 @@ TARGET_OTA_ASSERT_DEVICE := Sharp Z2,Sharp A1,FS8200
 # BLOCK_BASED_OTA
 BLOCK_BASED_OTA := false
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_KERNEL):kernel
+
 # Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
