@@ -47,4 +47,4 @@
 | 5. Init device      | lunch                                                                                                                     |
 | 6. Start build      | make otapackage                                                                                                           |
 |                     |                                                                                                                           | 
-|repo android-7.1.2_r9|  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r8                                      |
+|repo android-7.1.2   |  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r39                                     |
