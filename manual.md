@@ -49,15 +49,3 @@
 |                     |                                                                                                                           | 
 |kernel Android 6.0   |  git clone https://github.com/taras-fedora-syn/m685.git --single-branch kernel/sharp/sharp_z2                             |
 |repo android-7.1.2_r9|  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r8                                      |
-
-##### Notes: [kernel.mk (OmniRom)](https://github.com/omnirom/android_build/blob/android-7.1/core/tasks/kernel.mk) input foldername/build/core/tasks, thanks [Denis_PDA](https://4pda.ru/forum/index.php?s=&showtopic=209610&view=findpost&p=57779996)
-<details>
-<summary>-</summary>
-include vendor/omni/config/branding.mk
-   
-KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ 
-</details>
-<details>
-<summary>+</summary> 
-KERNEL_OUT :=$(ANDROID_BUILD_TOP)/$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
-</details>
