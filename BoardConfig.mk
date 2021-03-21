@@ -139,6 +139,9 @@ VENDOR_SECURITY_PATCH := 2020-02-01
 BOARD_SEPOLICY_DIRS := \
        $(LOCAL_PATH)/sepolicy
        
+# Sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+       
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
