@@ -231,3 +231,4 @@ $(call inherit-product, vendor/sharp/sharp_z2/config/common.mk)
 
 # Vendor
 $(call inherit-product, vendor/sharp/sharp_z2/sharp_z2-vendor.mk)
+$(call inherit-product-if-exists, vendor/sharp/sharp_z2/sepolicy/sepolicy.mk)
