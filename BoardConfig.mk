@@ -135,12 +135,9 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-02-01
 
-# SELinux
-BOARD_SEPOLICY_DIRS := \
-       $(LOCAL_PATH)/sepolicy
-       
+      
 # Sepolicy
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += device/sharp/sharp_z2/sepolicy
        
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
