@@ -52,4 +52,5 @@
 
 
 in  foldername/device/sharp/sharp_z2/sepolicy/Android.mk   +#
+
 254#    $(hide) $(HOST_OUT_EXECUTABLES)/checkfc $(PRIVATE_SEPOLICY) $<
