@@ -51,4 +51,6 @@
 |repo android-7.1.2   |  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r39                                     |
 
 
-in  foldername/device/sharp/sharp_z2/sepolicy/Android.mk   comment line 254#    $(hide) $(HOST_OUT_EXECUTABLES)/checkfc $(PRIVATE_SEPOLICY) $<
+in  foldername/device/sharp/sharp_z2/sepolicy/Android.mk   comment line 254
+
+#    $(hide) $(HOST_OUT_EXECUTABLES)/checkfc $(PRIVATE_SEPOLICY) $<
