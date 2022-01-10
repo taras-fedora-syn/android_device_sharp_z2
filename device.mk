@@ -78,7 +78,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
 	$(LOCAL_PATH)/rootdir/init.volte.rc:root/init.volte.rc \
 	$(LOCAL_PATH)/rootdir/init.mal.rc:root/init.mal.rc \
-	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc
+	$(LOCAL_PATH)/rootdir/ueventd.mt6797.rc:root/ueventd.mt6797.rc \
+	$(LOCAL_PATH)/rootdir/file_contexts:root/file_contexts \
+	$(LOCAL_PATH)/rootdir/service_contexts:root/service_contexts \
+	$(LOCAL_PATH)/rootdir/property_contexts:root/property_contexts
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
