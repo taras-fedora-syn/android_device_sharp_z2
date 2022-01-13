@@ -47,7 +47,16 @@
 | 5. Init device      | lunch                                                                                                                     |
 | 6. Start build      | make otapackage                                                                                                           |
 |                     |                                                                                                                           | 
-|kernel Android 6.0   |  git clone https://github.com/taras-fedora-syn/m685.git --single-branch kernel/sharp/sharp_z2                             |
+|kernel Android 6.0   |git clone https://github.com/taras-fedora-syn/m685.git --single-branch kernel/sharp/sharp_z2
+|                     |TARGET_KERNEL_CONFIG := mx6_defconfig
+|kernel Android 7.1   |git clone https://github.com/taras-fedora-syn/android_kernel_le_x620-test_mt6797.git --single-branch kernel/sharp/sharp_z2
+|                     |TARGET_KERNEL_CONFIG := aeon6797_6m_n_debug_defconfig
+|kernel Android 8.1   |git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2
+|                     |TARGET_KERNEL_CONFIG := mad_val_n1_defconfig
+|                     |git clone https://github.com/taras-fedora-syn/android_kernel_shift_mt6797.git --single-branch kernel/sharp/sharp_z2
+|                     |TARGET_KERNEL_CONFIG := SHIFT5me_debug_defconfig
+|kernel Android 9.0   |git clone https://gitlab.com/taras-fedora-syn/kernel-shift-mt6797.git --single-branch kernel/sharp/sharp_z2
+|                     |TARGET_KERNEL_CONFIG := SHIFT5me_debug_defconfig                             |
 |repo android-7.1.2_r9|  repo init -u https://android.googlesource.com/platform/manifest -b android-7.1.2_r8                                      |
 
 ##### Notes: [kernel.mk (OmniRom)](https://github.com/omnirom/android_build/blob/android-7.1/core/tasks/kernel.mk) input foldername/build/core/tasks, thanks [Denis_PDA](https://4pda.ru/forum/index.php?s=&showtopic=209610&view=findpost&p=57779996)
