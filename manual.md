@@ -43,7 +43,7 @@
 | 2. Init device files| git clone https://github.com/taras-fedora-syn/android_device_sharp_z2.git -b master device/sharp/sharp_z2                 |
 |                     | git clone https://github.com/taras-fedora-syn/android_vendor_sharp_z2.git --single-branch vendor/sharp/sharp_z2           |
 |                     | git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2           |
-| 4. Setup enviroment | source build/envsetup.sh                                                                                                  |
+| 4. Setup enviroment | . source build/envsetup.sh                                                                                                  |
 | 5. Init device      | lunch                                                                                                                     |
 |                     | export LC_ALL=C                                                                                                           |
 | 6. Start build      | make otapackage                                                                                                           |
