@@ -37,10 +37,8 @@
 | 1. Init source      | mkdir foldername                                                                                                          |
 |                     | chmod -R 777 foldername                                                                                                   |
 |                     | cd foldername                                                                                                             |                     | git config --global user.name "name" && git config --global user.email "name@gmail.com"                                   |
-|                     | repo init -u https://github.com/LineageOS/android.git -b cm-14.1  
-|
-|                     | repo sync -c -j4 --force-sync 
-|
+|                     | repo init -u https://github.com/LineageOS/android.git -b cm-14.1
+|                     | repo sync -c -j4 --force-sync
 | 2. Init device files| git clone https://github.com/taras-fedora-syn/android_device_sharp_z2.git -b lineage-14.1 device/sharp/sharp_z2                 |
 |                     | git clone https://github.com/taras-fedora-syn/android_vendor_sharp_z2.git --single-branch vendor/sharp/sharp_z2           |
 |                     | git clone https://github.com/taras-fedora-syn/android_kernel_sharp_z2.git --single-branch kernel/sharp/sharp_z2           |
